@@ -1,69 +1,48 @@
-<!doctype html>
-<html><head><meta charset="utf-8">
-<style>
-  :root{--bg:oklch(98.2% 0.003 277.7);--fg:oklch(24.1% 0.0099 277.7);--muted-fg:oklch(50.3% 0.0139 277.7);
-    --border:oklch(91% 0.0077 277.7);--primary:oklch(66.7% 0.2194 37.8);--red:oklch(62.6% 0.1933 23.03)}
-  *{margin:0;box-sizing:border-box}
-  body{width:1280px;height:640px;background:var(--bg);font-family:Inter,system-ui,sans-serif;color:var(--fg);
-    display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .stack{display:flex;flex-direction:column;align-items:center;gap:22px}
-  .title{display:flex;align-items:center;gap:14px;font-size:46px;font-weight:600;letter-spacing:-0.02em}
-  .title i{width:16px;height:16px;border-radius:4px;background:var(--primary);display:block}
-  .card{width:620px;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;
-    box-shadow:0 1px 2px rgb(0 0 0/.04),0 16px 40px -16px rgb(0 0 0/.16)}
-  svg{display:block}
-  .foot{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:16px;border-top:1px solid var(--border)}
-  .foot b{font-weight:600}
-  .badge{font-size:14px;font-weight:600;color:#fff;background:var(--red);padding:4px 10px;border-radius:99px}
-</style></head><body>
-<div class="stack">
-  <div class="title"><i></i>LayerWatch AI</div>
-  <div class="card">
-    <svg viewBox="0 0 620 380" width="620" height="380" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26282c"/><stop offset="1" stop-color="#1a1b1e"/></linearGradient>
-        <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#3a3d42" stroke-width="1"/></pattern>
-      </defs>
-      <rect width="620" height="380" fill="url(#sky)"/>
-      <!-- bed in perspective -->
-      <g transform="translate(310 250)">
-        <polygon points="-270,120 270,120 200,-60 -200,-60" fill="#2a2c30"/>
-        <polygon points="-270,120 270,120 200,-60 -200,-60" fill="url(#grid)" opacity=".8"/>
-      </g>
-      <!-- good part -->
-      <g>
-        <polygon points="120,300 210,300 210,215 120,215" fill="#e9763c"/>
-        <polygon points="210,300 238,284 238,201 210,215" fill="#b9562a"/>
-        <polygon points="120,215 210,215 238,201 150,201" fill="#f59a68"/>
-        <g stroke="#cf6430" stroke-width="1" opacity=".5">
-          <line x1="120" y1="230" x2="210" y2="230"/><line x1="120" y1="245" x2="210" y2="245"/>
-          <line x1="120" y1="260" x2="210" y2="260"/><line x1="120" y1="275" x2="210" y2="275"/><line x1="120" y1="290" x2="210" y2="290"/>
-        </g>
-      </g>
-      <!-- failed part: base + spaghetti -->
-      <polygon points="330,312 420,312 448,298 358,298" fill="#e9763c"/>
-      <polygon points="330,312 420,312 420,300 330,300" fill="#d9682f"/>
-      <g fill="none" stroke="#f08a52" stroke-width="2.4" stroke-linecap="round">
-        <path d="M360 300 C340 250, 420 240, 400 200 S 330 170, 380 140 S 470 160, 450 210 S 380 260, 430 280"/>
-        <path d="M390 298 C430 260, 480 270, 470 220 S 410 180, 440 150 S 500 150, 490 200"/>
-        <path d="M350 290 C320 240, 360 200, 340 170 S 380 120, 420 150 S 400 220, 360 240"/>
-        <path d="M410 296 C450 280, 500 250, 470 240 S 420 230, 450 190 S 420 130, 390 170"/>
-        <path d="M372 272 C400 250, 440 262, 425 230 S 370 200, 400 180"/>
-        <path d="M440 290 C470 300, 505 270, 495 245"/>
-      </g>
-      <!-- detection -->
-      <rect x="318" y="126" width="196" height="196" rx="6" fill="oklch(62.6% 0.1933 23.03 / .12)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="3"/>
-      <g transform="translate(318 104)">
-        <rect width="138" height="22" rx="4" fill="oklch(62.6% 0.1933 23.03)"/>
-        <text x="9" y="15.5" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#fff">spaghetti · 0.91</text>
-      </g>
-      <!-- ok tag -->
-      <g transform="translate(120 176)">
-        <rect width="36" height="22" rx="4" fill="#00a072"/>
-        <text x="9" y="15.5" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#fff">OK</text>
-      </g>
-    </svg>
-    <div class="foot"><span><b>MK4S</b> · Print paused automatically</span><span class="badge">Failed</span></div>
-  </div>
-</div>
-</body></html>
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Mono;src:url(file:///root/.claude/skills/synced/fe44542c-d3ce-4a69-8f47-9043d7242fb5_fe69a9b5-65c7-44ed-8729-eac5f91044b1/canvas-design/canvas-fonts/GeistMono-Regular.ttf)}
+@font-face{font-family:Sans;src:url(file:///root/.claude/skills/synced/fe44542c-d3ce-4a69-8f47-9043d7242fb5_fe69a9b5-65c7-44ed-8729-eac5f91044b1/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf)}
+html,body{margin:0;width:1280px;height:640px;background:#141518;overflow:hidden}
+svg{display:block}
+</style></head><body><svg id="s" width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg"></svg>
+<script>
+const s=document.getElementById('s'),NS='http://www.w3.org/2000/svg';
+const el=(t,a,p=s)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+// faint survey grid
+const g=el('g',{stroke:'#1f2125','stroke-width':1});
+for(let x=40;x<=1240;x+=40)el('line',{x1:x,y1:40,x2:x,y2:600},g);
+for(let y=40;y<=600;y+=40)el('line',{x1:40,y1:y,x2:1240,y2:y},g);
+// strata object: a tapered vase built from lines, centred on x=640
+const cx=640, base=470, H=210, step=4, ORANGE='#e8743b';
+let rnd=7;const r=()=>{rnd=(rnd*16807)%2147483647;return rnd/2147483647};
+const width=t=>110+42*Math.sin(t*Math.PI*0.85)-18*t; // t:0 bottom..1 top
+const layers=Math.floor(H/step), breakAt=Math.floor(layers*0.62);
+const L=el('g',{stroke:ORANGE,'stroke-width':1.6,'stroke-linecap':'round',fill:'none'});
+let topY=0,topW=0;
+for(let i=0;i<breakAt;i++){const t=i/layers,y=base-i*step,w=width(t);
+  el('line',{x1:cx-w,y1:y,x2:cx+w,y2:y,opacity:0.55+0.45*(i/breakAt)},L);topY=y;topW=w;}
+// rupture: same line weight loosens into curves
+const RED='#e5484d',bx=cx-205,bw=410,c=22;const clampX=v=>Math.max(bx+18,Math.min(bx+bw-18,v));
+const R=el('g',{stroke:ORANGE,'stroke-width':1.6,'stroke-linecap':'round',fill:'none'});
+for(let k=0;k<22;k++){
+  let x=cx-topW+r()*topW*2, y=topY-2, d='M'+x.toFixed(1)+' '+y.toFixed(1);
+  for(let j=0;j<5;j++){const nx=clampX(x+(r()-0.5)*130),ny=Math.max(topY-180,y-10-r()*30);
+    d+=' Q'+clampX(x+(r()-0.5)*140).toFixed(1)+' '+Math.max(topY-185,y-r()*44).toFixed(1)+' '+nx.toFixed(1)+' '+ny.toFixed(1);x=nx;y=ny;}
+  el('path',{d,opacity:0.35+r()*0.6},R);}
+// instrument: corner brackets around the rupture
+const by=topY-205,bh=225;
+const B=el('g',{stroke:RED,'stroke-width':2,fill:'none'});
+[[bx,by,1,1],[bx+bw,by,-1,1],[bx,by+bh,1,-1],[bx+bw,by+bh,-1,-1]].forEach(([x,y,sx,sy])=>
+  el('path',{d:`M${x} ${y+sy*c} L${x} ${y} L${x+sx*c} ${y}`},B));
+el('line',{x1:bx+bw,y1:by+bh/2,x2:bx+bw+60,y2:by+bh/2,stroke:RED,'stroke-width':1});
+const T=(x,y,txt,a)=>{const e=el('text',Object.assign({x,y,'font-family':'Mono','font-size':12,fill:'#8b8f98','letter-spacing':1.5},a||{}));e.textContent=txt;return e};
+T(bx+bw+68,by+bh/2+4,'ANOMALY  0.91',{fill:RED});
+T(bx+bw+68,by+bh/2+22,'LAYER '+breakAt+' / PAUSED',{});
+// strata ruler on the left of object
+for(let i=0;i<=breakAt;i+=8){const y=base-i*step;el('line',{x1:cx-175,y1:y,x2:cx-(i%32?168:160),y2:y,stroke:'#4a4e56','stroke-width':1});}
+T(cx-232,base+4,'Z 0.0',{});
+// title block, centred low
+const t1=el('text',{x:cx,y:546,'text-anchor':'middle','font-family':'Sans','font-size':40,fill:'#eceef1','letter-spacing':1});t1.textContent='LayerWatch AI';
+T(cx,574,'CAMERA FAILURE DETECTION · PRUSA CONNECT',{'text-anchor':'middle','font-size':11,'letter-spacing':3});
+// corner marks
+T(64,76,'PLATE 01',{'font-size':11}); T(1216,76,'LW · 01',{'font-size':11,'text-anchor':'end'});
+</script></body></html>
