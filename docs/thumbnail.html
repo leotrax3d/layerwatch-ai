@@ -1,62 +1,48 @@
-<!doctype html>
-<html><head><meta charset="utf-8">
-<style>
-  :root{
-    --bg: oklch(98.2% 0.003 277.7); --fg: oklch(24.1% 0.0099 277.7);
-    --muted: oklch(95.6% 0.0045 277.7); --muted-fg: oklch(50.3% 0.0139 277.7);
-    --border: oklch(91% 0.0077 277.7); --primary: oklch(66.7% 0.2194 37.8);
-    --destructive: oklch(55.7% 0.1933 23.03); --red9: oklch(62.6% 0.1933 23.03);
-    --success: #00a072; --success-bg:#e4f7ed; --success-fg:#008257;
-  }
-  *{box-sizing:border-box;margin:0}
-  body{width:1280px;height:640px;background:var(--bg);color:var(--fg);
-    font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;
-    justify-content:center;padding:0;overflow:hidden}
-  .copy{flex:1}
-  .mark{display:flex;align-items:center;gap:12px;color:var(--muted-fg);font-size:20px;font-weight:500;margin-bottom:28px}
-  .mark i{width:12px;height:12px;border-radius:3px;background:var(--primary);display:block}
-  h1{font-size:68px;font-weight:600;letter-spacing:-0.025em;line-height:1}
-  p.lead{margin-top:22px;font-size:27px;line-height:1.35;color:var(--muted-fg);max-width:470px}
-  ul{list-style:none;padding:0;margin-top:34px;display:flex;flex-direction:column;gap:12px;font-size:20px}
-  li{display:flex;gap:12px;align-items:center}
-  li b{width:6px;height:6px;border-radius:50%;background:var(--primary);display:block}
-  .card{width:560px;background:#fff;border:1px solid var(--border);border-radius:12px;
-    box-shadow:0 1px 2px rgb(0 0 0 / .04),0 12px 32px -12px rgb(0 0 0 / .12)}
-  .head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px 14px}
-  .head h2{font-size:20px;font-weight:600}
-  .badge{font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;color:#fff;background:var(--destructive)}
-  .body{padding:0 20px 20px;display:flex;flex-direction:column;gap:14px}
-  .pic{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:960/736}
-  .pic img{display:block;width:100%;height:100%}
-  .pic svg{position:absolute;inset:0}
-  .pic svg{display:block;width:100%;height:100%}
-  .count{position:absolute;top:10px;left:10px;background:rgb(255 255 255 / .92);color:var(--destructive);
-    font-size:13px;font-weight:600;padding:2px 7px;border-radius:4px}
-  .bar{height:8px;border-radius:99px;background:var(--muted);overflow:hidden}
-  .bar div{height:100%;width:86%;background:var(--destructive);border-radius:99px}
-  dl{display:grid;grid-template-columns:1fr 1fr;row-gap:6px;font-size:15px}
-  dt{color:var(--muted-fg)} dd{font-variant-numeric:tabular-nums}
-  .note{font-size:15px;font-weight:500}
-.stack{display:flex;flex-direction:column;align-items:center;gap:16px}
-  .title{display:flex;align-items:center;gap:14px;font-size:44px;font-weight:600;letter-spacing:-0.02em}
-  .title i{width:16px;height:16px;border-radius:4px;background:var(--primary);display:block}
-</style></head><body>
-  <div class="stack">
-  <div class="title"><i></i>LayerWatch AI</div>
-  <div class="card">
-    <div class="head"><h2>MK4S · Workshop</h2><span class="badge">Failed</span></div>
-    <div class="body">
-      <div class="pic">
-        <img src="thumbnail-photo.webp" alt="">
-        <svg viewBox="0 0 960 736" preserveAspectRatio="none">
-          <rect x="70" y="105" width="410" height="390" rx="4" fill="oklch(55.7% 0.1933 23.03 / .10)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="6"/>
-          <rect x="4" y="505" width="420" height="227" rx="4" fill="oklch(55.7% 0.1933 23.03 / .10)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="6"/>
-        </svg>
-        
-      </div>
-      
-      <p class="note">Print paused · 2 regions flagged</p>
-    </div>
-  </div>
-  </div>
-</body></html>
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Mono;src:url(file:///root/.claude/skills/synced/fe44542c-d3ce-4a69-8f47-9043d7242fb5_fe69a9b5-65c7-44ed-8729-eac5f91044b1/canvas-design/canvas-fonts/GeistMono-Regular.ttf)}
+@font-face{font-family:Sans;src:url(file:///root/.claude/skills/synced/fe44542c-d3ce-4a69-8f47-9043d7242fb5_fe69a9b5-65c7-44ed-8729-eac5f91044b1/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf)}
+html,body{margin:0;width:1280px;height:640px;background:#141518;overflow:hidden}
+svg{display:block}
+</style></head><body><svg id="s" width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg"></svg>
+<script>
+const s=document.getElementById('s'),NS='http://www.w3.org/2000/svg';
+const el=(t,a,p=s)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+// faint survey grid
+const g=el('g',{stroke:'#1f2125','stroke-width':1});
+for(let x=40;x<=1240;x+=40)el('line',{x1:x,y1:40,x2:x,y2:600},g);
+for(let y=40;y<=600;y+=40)el('line',{x1:40,y1:y,x2:1240,y2:y},g);
+// strata object: a tapered vase built from lines, centred on x=640
+const cx=640, base=470, H=210, step=4, ORANGE='#e8743b';
+let rnd=7;const r=()=>{rnd=(rnd*16807)%2147483647;return rnd/2147483647};
+const width=t=>110+42*Math.sin(t*Math.PI*0.85)-18*t; // t:0 bottom..1 top
+const layers=Math.floor(H/step), breakAt=Math.floor(layers*0.62);
+const L=el('g',{stroke:ORANGE,'stroke-width':1.6,'stroke-linecap':'round',fill:'none'});
+let topY=0,topW=0;
+for(let i=0;i<breakAt;i++){const t=i/layers,y=base-i*step,w=width(t);
+  el('line',{x1:cx-w,y1:y,x2:cx+w,y2:y,opacity:0.55+0.45*(i/breakAt)},L);topY=y;topW=w;}
+// rupture: same line weight loosens into curves
+const RED='#e5484d',bx=cx-205,bw=410,c=22;const clampX=v=>Math.max(bx+18,Math.min(bx+bw-18,v));
+const R=el('g',{stroke:ORANGE,'stroke-width':1.6,'stroke-linecap':'round',fill:'none'});
+for(let k=0;k<22;k++){
+  let x=cx-topW+r()*topW*2, y=topY-2, d='M'+x.toFixed(1)+' '+y.toFixed(1);
+  for(let j=0;j<5;j++){const nx=clampX(x+(r()-0.5)*130),ny=Math.max(topY-180,y-10-r()*30);
+    d+=' Q'+clampX(x+(r()-0.5)*140).toFixed(1)+' '+Math.max(topY-185,y-r()*44).toFixed(1)+' '+nx.toFixed(1)+' '+ny.toFixed(1);x=nx;y=ny;}
+  el('path',{d,opacity:0.35+r()*0.6},R);}
+// instrument: corner brackets around the rupture
+const by=topY-205,bh=225;
+const B=el('g',{stroke:RED,'stroke-width':2,fill:'none'});
+[[bx,by,1,1],[bx+bw,by,-1,1],[bx,by+bh,1,-1],[bx+bw,by+bh,-1,-1]].forEach(([x,y,sx,sy])=>
+  el('path',{d:`M${x} ${y+sy*c} L${x} ${y} L${x+sx*c} ${y}`},B));
+el('line',{x1:bx+bw,y1:by+bh/2,x2:bx+bw+60,y2:by+bh/2,stroke:RED,'stroke-width':1});
+const T=(x,y,txt,a)=>{const e=el('text',Object.assign({x,y,'font-family':'Mono','font-size':12,fill:'#8b8f98','letter-spacing':1.5},a||{}));e.textContent=txt;return e};
+T(bx+bw+68,by+bh/2+4,'ANOMALY  0.91',{fill:RED});
+T(bx+bw+68,by+bh/2+22,'LAYER '+breakAt+' / PAUSED',{});
+// strata ruler on the left of object
+for(let i=0;i<=breakAt;i+=8){const y=base-i*step;el('line',{x1:cx-175,y1:y,x2:cx-(i%32?168:160),y2:y,stroke:'#4a4e56','stroke-width':1});}
+T(cx-232,base+4,'Z 0.0',{});
+// title block, centred low
+const t1=el('text',{x:cx,y:546,'text-anchor':'middle','font-family':'Sans','font-size':40,fill:'#eceef1','letter-spacing':1});t1.textContent='LayerWatch AI';
+T(cx,574,'CAMERA FAILURE DETECTION · PRUSA CONNECT',{'text-anchor':'middle','font-size':11,'letter-spacing':3});
+// corner marks
+T(64,76,'PLATE 01',{'font-size':11}); T(1216,76,'LW · 01',{'font-size':11,'text-anchor':'end'});
+</script></body></html>
