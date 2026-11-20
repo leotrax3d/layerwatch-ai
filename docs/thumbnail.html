@@ -1,62 +1,69 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
 <style>
-  :root{
-    --bg: oklch(98.2% 0.003 277.7); --fg: oklch(24.1% 0.0099 277.7);
-    --muted: oklch(95.6% 0.0045 277.7); --muted-fg: oklch(50.3% 0.0139 277.7);
-    --border: oklch(91% 0.0077 277.7); --primary: oklch(66.7% 0.2194 37.8);
-    --destructive: oklch(55.7% 0.1933 23.03); --red9: oklch(62.6% 0.1933 23.03);
-    --success: #00a072; --success-bg:#e4f7ed; --success-fg:#008257;
-  }
-  *{box-sizing:border-box;margin:0}
-  body{width:1280px;height:640px;background:var(--bg);color:var(--fg);
-    font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;
-    justify-content:center;padding:0;overflow:hidden}
-  .copy{flex:1}
-  .mark{display:flex;align-items:center;gap:12px;color:var(--muted-fg);font-size:20px;font-weight:500;margin-bottom:28px}
-  .mark i{width:12px;height:12px;border-radius:3px;background:var(--primary);display:block}
-  h1{font-size:68px;font-weight:600;letter-spacing:-0.025em;line-height:1}
-  p.lead{margin-top:22px;font-size:27px;line-height:1.35;color:var(--muted-fg);max-width:470px}
-  ul{list-style:none;padding:0;margin-top:34px;display:flex;flex-direction:column;gap:12px;font-size:20px}
-  li{display:flex;gap:12px;align-items:center}
-  li b{width:6px;height:6px;border-radius:50%;background:var(--primary);display:block}
-  .card{width:560px;background:#fff;border:1px solid var(--border);border-radius:12px;
-    box-shadow:0 1px 2px rgb(0 0 0 / .04),0 12px 32px -12px rgb(0 0 0 / .12)}
-  .head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px 14px}
-  .head h2{font-size:20px;font-weight:600}
-  .badge{font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;color:#fff;background:var(--destructive)}
-  .body{padding:0 20px 20px;display:flex;flex-direction:column;gap:14px}
-  .pic{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:960/736}
-  .pic img{display:block;width:100%;height:100%}
-  .pic svg{position:absolute;inset:0}
-  .pic svg{display:block;width:100%;height:100%}
-  .count{position:absolute;top:10px;left:10px;background:rgb(255 255 255 / .92);color:var(--destructive);
-    font-size:13px;font-weight:600;padding:2px 7px;border-radius:4px}
-  .bar{height:8px;border-radius:99px;background:var(--muted);overflow:hidden}
-  .bar div{height:100%;width:86%;background:var(--destructive);border-radius:99px}
-  dl{display:grid;grid-template-columns:1fr 1fr;row-gap:6px;font-size:15px}
-  dt{color:var(--muted-fg)} dd{font-variant-numeric:tabular-nums}
-  .note{font-size:15px;font-weight:500}
-.stack{display:flex;flex-direction:column;align-items:center;gap:16px}
-  .title{display:flex;align-items:center;gap:14px;font-size:44px;font-weight:600;letter-spacing:-0.02em}
+  :root{--bg:oklch(98.2% 0.003 277.7);--fg:oklch(24.1% 0.0099 277.7);--muted-fg:oklch(50.3% 0.0139 277.7);
+    --border:oklch(91% 0.0077 277.7);--primary:oklch(66.7% 0.2194 37.8);--red:oklch(62.6% 0.1933 23.03)}
+  *{margin:0;box-sizing:border-box}
+  body{width:1280px;height:640px;background:var(--bg);font-family:Inter,system-ui,sans-serif;color:var(--fg);
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .stack{display:flex;flex-direction:column;align-items:center;gap:22px}
+  .title{display:flex;align-items:center;gap:14px;font-size:46px;font-weight:600;letter-spacing:-0.02em}
   .title i{width:16px;height:16px;border-radius:4px;background:var(--primary);display:block}
+  .card{width:620px;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;
+    box-shadow:0 1px 2px rgb(0 0 0/.04),0 16px 40px -16px rgb(0 0 0/.16)}
+  svg{display:block}
+  .foot{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:16px;border-top:1px solid var(--border)}
+  .foot b{font-weight:600}
+  .badge{font-size:14px;font-weight:600;color:#fff;background:var(--red);padding:4px 10px;border-radius:99px}
 </style></head><body>
-  <div class="stack">
+<div class="stack">
   <div class="title"><i></i>LayerWatch AI</div>
   <div class="card">
-    <div class="head"><h2>MK4S · Workshop</h2><span class="badge">Failed</span></div>
-    <div class="body">
-      <div class="pic">
-        <img src="thumbnail-photo.webp" alt="">
-        <svg viewBox="0 0 960 736" preserveAspectRatio="none">
-          <rect x="70" y="105" width="410" height="390" rx="4" fill="oklch(55.7% 0.1933 23.03 / .10)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="6"/>
-          <rect x="4" y="505" width="420" height="227" rx="4" fill="oklch(55.7% 0.1933 23.03 / .10)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="6"/>
-        </svg>
-        
-      </div>
-      
-      <p class="note">Print paused · 2 regions flagged</p>
-    </div>
+    <svg viewBox="0 0 620 380" width="620" height="380" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26282c"/><stop offset="1" stop-color="#1a1b1e"/></linearGradient>
+        <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#3a3d42" stroke-width="1"/></pattern>
+      </defs>
+      <rect width="620" height="380" fill="url(#sky)"/>
+      <!-- bed in perspective -->
+      <g transform="translate(310 250)">
+        <polygon points="-270,120 270,120 200,-60 -200,-60" fill="#2a2c30"/>
+        <polygon points="-270,120 270,120 200,-60 -200,-60" fill="url(#grid)" opacity=".8"/>
+      </g>
+      <!-- good part -->
+      <g>
+        <polygon points="120,300 210,300 210,215 120,215" fill="#e9763c"/>
+        <polygon points="210,300 238,284 238,201 210,215" fill="#b9562a"/>
+        <polygon points="120,215 210,215 238,201 150,201" fill="#f59a68"/>
+        <g stroke="#cf6430" stroke-width="1" opacity=".5">
+          <line x1="120" y1="230" x2="210" y2="230"/><line x1="120" y1="245" x2="210" y2="245"/>
+          <line x1="120" y1="260" x2="210" y2="260"/><line x1="120" y1="275" x2="210" y2="275"/><line x1="120" y1="290" x2="210" y2="290"/>
+        </g>
+      </g>
+      <!-- failed part: base + spaghetti -->
+      <polygon points="330,312 420,312 448,298 358,298" fill="#e9763c"/>
+      <polygon points="330,312 420,312 420,300 330,300" fill="#d9682f"/>
+      <g fill="none" stroke="#f08a52" stroke-width="2.4" stroke-linecap="round">
+        <path d="M360 300 C340 250, 420 240, 400 200 S 330 170, 380 140 S 470 160, 450 210 S 380 260, 430 280"/>
+        <path d="M390 298 C430 260, 480 270, 470 220 S 410 180, 440 150 S 500 150, 490 200"/>
+        <path d="M350 290 C320 240, 360 200, 340 170 S 380 120, 420 150 S 400 220, 360 240"/>
+        <path d="M410 296 C450 280, 500 250, 470 240 S 420 230, 450 190 S 420 130, 390 170"/>
+        <path d="M372 272 C400 250, 440 262, 425 230 S 370 200, 400 180"/>
+        <path d="M440 290 C470 300, 505 270, 495 245"/>
+      </g>
+      <!-- detection -->
+      <rect x="318" y="126" width="196" height="196" rx="6" fill="oklch(62.6% 0.1933 23.03 / .12)" stroke="oklch(62.6% 0.1933 23.03)" stroke-width="3"/>
+      <g transform="translate(318 104)">
+        <rect width="138" height="22" rx="4" fill="oklch(62.6% 0.1933 23.03)"/>
+        <text x="9" y="15.5" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#fff">spaghetti · 0.91</text>
+      </g>
+      <!-- ok tag -->
+      <g transform="translate(120 176)">
+        <rect width="36" height="22" rx="4" fill="#00a072"/>
+        <text x="9" y="15.5" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#fff">OK</text>
+      </g>
+    </svg>
+    <div class="foot"><span><b>MK4S</b> · Print paused automatically</span><span class="badge">Failed</span></div>
   </div>
-  </div>
+</div>
 </body></html>
