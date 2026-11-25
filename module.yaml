@@ -96,3 +96,28 @@ ui:
     pages:
       - path: layerwatch-ai
         title: LayerWatch AI
+    # A dashboard card of one printer's check. With no printer picked it
+    # shows the first one LayerWatch AI follows.
+    cards:
+      - id: printer
+        title: LayerWatch AI
+        description: One printer's failure check, with its trend and the newest picture.
+        icon: printer
+        size: {w: 4, h: 6}
+        least: {w: 3, h: 2}
+        settings:
+          - key: device
+            kind: printer
+            label: Printer
+          - key: picture
+            kind: switch
+            label: Show the newest picture
+            default: true
+    # The check at the foot of a printer's Status tab, and one line on its
+    # card in the listing while it prints.
+    device_section:
+      - id: layerwatch-ai
+        title: LayerWatch AI
+    device_card:
+      - id: layerwatch-ai
+        title: LayerWatch AI

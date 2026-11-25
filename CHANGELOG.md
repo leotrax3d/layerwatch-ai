@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+- A dashboard card of one printer's check: the verdict, the trend above the
+  print's baseline, the newest picture with the flagged regions, and the
+  latest incident. It shows the first printer LayerWatch AI follows until
+  one is picked, and leaves out the picture, then the figures, when it is
+  made small.
+- A LayerWatch AI section at the foot of a printer's Status tab, and one line
+  on its card in the printer listing while it prints.
+- All three read one shared status, which is read again a few seconds after
+  each stored snapshot and when a print starts or settles. They open no
+  stream of their own and poll nothing, as the core asks of a card.
+- The page draws its verdict badge and trend bar from the same components.
+
 ## 0.3.0
 
 - Renamed from Print Guard to LayerWatch AI, so it is not confused with the

@@ -23,7 +23,9 @@
   } from './guard';
   import { heldHost } from './host';
   import Framed from './framed.svelte';
+  import Meter from './meter.svelte';
   import Setup from './setup.svelte';
+  import { verdictBadge, when } from './verdict';
 
   const host = heldHost();
   const t = host.t;
@@ -70,28 +72,7 @@
     }
   };
 
-  const variant = {
-    warming_up: 'secondary',
-    ok: 'success',
-    warning: 'warning',
-    failing: 'destructive',
-  } as const;
-
-  const barColour = {
-    warming_up: 'bg-success',
-    ok: 'bg-success',
-    warning: 'bg-warning',
-    failing: 'bg-destructive',
-  } as const;
-
   const printerName = (id: string): string => host.fleet.device(id)?.name ?? id;
-
-  const when = (iso: string): string => {
-    const at = new Date(iso);
-    return Number.isNaN(at.getTime()) || at.getFullYear() < 2000
-      ? '–'
-      : at.toLocaleString();
-  };
 
   /** Replaces one object URL with another and frees the old one. */
   const swap = (
@@ -252,7 +233,7 @@
               <CardTitle class="flex items-center justify-between gap-2">
                 <span class="truncate">{printerName(watch.printer)}</span>
                 {#if watch.printing}
-                  <Badge variant={variant[watch.verdict]}
+                  <Badge variant={verdictBadge[watch.verdict]}
                     >{t(`guard.verdict.${watch.verdict}`)}</Badge
                   >
                 {:else}
@@ -276,22 +257,7 @@
                 </div>
               {/if}
 
-              <div
-                class="h-2 w-full overflow-hidden rounded-full bg-muted"
-                role="meter"
-                aria-label={t('guard.camera.excess')}
-                aria-valuemin="0"
-                aria-valuemax="1"
-                aria-valuenow={Math.max(0, watch.excess)}
-              >
-                <div
-                  class="h-full rounded-full {barColour[watch.verdict]}"
-                  style="width: {Math.min(
-                    100,
-                    Math.max(0, watch.excess) * 100,
-                  )}%"
-                ></div>
-              </div>
+              <Meter {watch} />
 
               <dl class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
                 <dt class="text-muted-foreground">{t('guard.camera.score')}</dt>

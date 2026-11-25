@@ -57,5 +57,11 @@
   "guard.setup.frameBase.example": "http://192.168.1.20:18491",
   "guard.setup.code": "Setup-Code",
   "guard.setup.code.help": "Führe den Installationsbefehl aus der README auf dem Rechner für Obico aus und füge den angezeigten Code ein. Er füllt die Felder darunter aus.",
-  "guard.setup.code.bad": "Das ist kein LayerWatch-AI-Setup-Code."
+  "guard.setup.code.bad": "Das ist kein LayerWatch-AI-Setup-Code.",
+  "guard.card.heading": "LayerWatch AI · {printer}",
+  "guard.card.open": "LayerWatch AI öffnen",
+  "guard.card.loading": "LayerWatch AI wird gelesen",
+  "guard.card.notFollowed": "LayerWatch AI beobachtet keine Kamera dieses Druckers. Schalte die regelmäßige Aufnahme für seine Kamera ein.",
+  "guard.card.incident": "Letzter Vorfall {time}: {outcome}",
+  "guard.card.line": "LayerWatch AI: {verdict} · Trend {excess}"
 }
